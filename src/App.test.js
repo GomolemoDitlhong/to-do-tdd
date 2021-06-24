@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "./custom-render";
 import App from "./App";
 
 describe("<App />", () => {
