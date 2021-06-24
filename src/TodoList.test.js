@@ -9,8 +9,8 @@ describe("<App />", () => {
     render(<TodoList />);
     await waitForElementToBeRemoved(() => screen.getByText(/Fetching todos/i));
     expect(axios.get).toHaveBeenCalledTimes(1);
-    todos.slice(0, 15).forEach((td) => {
-      expect(screen.getByText(td.title)).toBeInTheDocument();
+    todos.slice(0, 15).forEach((todo) => {
+      expect(screen.getByText(todo.title)).toBeInTheDocument();
     });
   });
 });
